@@ -11,136 +11,111 @@ import java.util.Vector;
 
 public class Test {
     public static void main(String[] args) {
-        char[] figureStr = args[0].toCharArray();
+        String figury = args[0];
         int index = 1;
         try{
-            for(char c : figureStr){
+            for(char c : figury.toCharArray()){
                 switch(c){
-                    case 'o':{
-                        try{
-                            double temp = Double.parseDouble(args[index++]);
-                            if(temp<0)
-                                throw new NumberFormatException();
-                                System.out.println(
-                                    "Kolo, pole: "+
-                                    Kolo.area(temp)+", Obwod: "+
-                                    Kolo.circumference(temp));
-                        }catch(NumberFormatException ex){
-                            System.out.println(args[index-1]+" - Nieprawidlowa wartosc.");
+                    case 'c':{
+                        double[] parametry = {1.0,1.0,1.0,1.0,90.0};
+                        for(int i=0; i<parametry.length; i++)
+                            try{
+                                double temp = Double.parseDouble(args[index++]);
+                                if(temp<=0.0)
+                                    throw new NumberFormatException("");
+                                parametry[i] = temp;
+                            }catch(NumberFormatException ex){
+                                System.out.println("Wprowadzono nie prawidlowy parametr: "+args[index-1]+", Przyjeto: "+parametry[i]);
+                            }
+                        if(parametry[0]==parametry[1] && parametry[1]==parametry[2] && parametry[2]==parametry[3]){
+                            if(parametry[4]==90.0){
+                                Figura figura = new Kwadrat(parametry[0]);
+                                System.out.println("Obwod: "+figura.circumference()+", Pole: "+figura.area());
+                            }
+                            else if(parametry[4]>0 && parametry[4]<360){
+                                //ROMB
+                                Figura figura = new Romb(parametry[0],parametry[4]);
+                                System.out.println("Obwod: "+figura.circumference()+", Pole: "+figura.area());
+                            }
+                            else{
+                                //ZŁY KĄT
+                                System.out.println("Podano zly kat");
+                            }
+                        }else if(parametry[0]==parametry[1] && parametry[2]==parametry[3] && parametry[4]==90.0){
+                            //PROSTOKĄT
+                            Figura figura = new Prostokat(parametry[0],parametry[1]);
+                            System.out.println("Obwod: "+figura.circumference()+", Pole: "+figura.area());
+                        }else{
+                            System.out.println("Nieodpowiedia figura.");
                         }
-                    }
                         break;
+                    }
                     case 'p':{
+                        double parametry = 1.0;
                         try{
                             double temp = Double.parseDouble(args[index++]);
-                            if(temp<0)
-                                throw new NumberFormatException();
-                                System.out.println(
-                                    "Kolo, pole: "+
-                                    Pieciokat.area(temp)+", Obwod: "+
-                                    Pieciokat.circumference(temp));
+                            if(temp<=0.0)
+                                throw new NumberFormatException("");
+                            parametry = temp;
                         }catch(NumberFormatException ex){
-                            System.out.println(args[index-1]+" - Nieprawidlowa wartosc.");
+                            System.out.println("Wprowadzono nie prawidlowy parametr: "+args[index-1]+", Przyjeto: "+parametry);
                         }
-                    }
+
+                        // PIECIOKAT
+                        Figura figura = new Pieciokat(parametry);
+                        System.out.println("Obwod: "+figura.circumference()+", Pole: "+figura.area());
                         break;
+                    }
                     case 's':{
+                        double parametry = 1.0;
                         try{
                             double temp = Double.parseDouble(args[index++]);
-                            if(temp<0)
-                                throw new NumberFormatException();
-                                System.out.println(
-                                    "Kolo, pole: "+
-                                    Szesciokat.area(temp)+", Obwod: "+
-                                    Szesciokat.circumference(temp));
+                            if(temp<=0.0)
+                                throw new NumberFormatException("");
+                            parametry = temp;
                         }catch(NumberFormatException ex){
-                            System.out.println(args[index-1]+" - Nieprawidlowa wartosc.");
+                            System.out.println("Wprowadzono nie prawidlowy parametr.");
                         }
-                    }
+
+                        // SZESCIOKAT
+                        Figura figura = new Szesciokat(parametry);
+                        System.out.println("Obwod: "+figura.circumference()+", Pole: "+figura.area());
                         break;
-                    case 'r':{
-                        double tab[] = {1.0,180.0};
-                        try{
-                            double temp = Double.parseDouble(args[index++]);
-                            if(temp < 0)
-                                throw new NullPointerException();
-                            tab[0] = temp;
-                        }
-                        catch(NumberFormatException ex){
-                            System.out.println(args[index-1]+" - Nieprawidlowa wartosc.");
-                        }
-                        try{
-                            double temp = Double.parseDouble(args[index++]);
-                            if(temp < 0 || temp > 360)
-                                throw new NullPointerException();
-                            tab[1] = temp;
-                        }
-                        catch(NumberFormatException ex){
-                            System.out.println(args[index-1]+" - Nieprawidlowa wartosc.");
-                        }
-                        System.out.println(
-                            "Kolo, pole: "+
-                            Romb.area(tab[0],tab[1])+", Obwod: "+
-                            Romb.circumference(tab[0],tab[1]));
                     }
-                        break;
-                    case 't':{
-                        double tab[] = {1.0,1.0};
+                    case 'o':{
+                        double parametry = 1.0;
                         try{
                             double temp = Double.parseDouble(args[index++]);
-                            if(temp < 0)
-                                throw new NullPointerException();
-                            tab[0] = temp;
-                        }
-                        catch(NumberFormatException ex){
-                            System.out.println(args[index-1]+" - Nieprawidlowa wartosc.");
-                        }
-                        try{
-                            double temp = Double.parseDouble(args[index++]);
-                            if(temp < 0)
-                                throw new NullPointerException();
-                            tab[1] = temp;
-                        }
-                        catch(NumberFormatException ex){
-                            System.out.println(args[index-1]+" - Nieprawidlowa wartosc.");
-                        }
-                        System.out.println(
-                            "Kolo, pole: "+
-                            Prostokat.area(tab[0],tab[1])+", Obwod: "+
-                            Prostokat.circumference(tab[0],tab[1]));
-                    }
-                        break;
-                    case 'k':{
-                        try{
-                            double temp = Double.parseDouble(args[index++]);
-                            if(temp<0)
-                                throw new NumberFormatException();
-                                System.out.println(
-                                    "Kolo, pole: "+
-                                    new Kwadrat.area(temp)+", Obwod: "+
-                                    new Kwadrat.circumference(temp));
+                            if(temp<=0.0)
+                                throw new NumberFormatException("");
+                            parametry = temp;
                         }catch(NumberFormatException ex){
-                            System.out.println(args[index-1]+" - Nieprawidlowa wartosc.");
+                            System.out.println("Wprowadzono nie prawidlowy parametr.");
                         }
-                    }
+
+                        // KOLO
+                        Figura figura = new Kolo(parametry);
+                        System.out.println("Obwod: "+figura.circumference()+", Pole: "+figura.area());
                         break;
+                    }
                     default:{
-                        System.out.println(c+" - Nieprawidlowy parametr.");
-                    }
+                        System.out.println("Wprowadzono nie prawidlowy parametr.");
                         break;
+                    }
                 }
             }
-        }catch(ArrayIndexOutOfBoundsException ex){
-            System.out.println(" Wprowadzono za malo parametrow.");
         }
+        catch(ArrayIndexOutOfBoundsException ex){
+            System.out.println("Wprowadzono za malo parametrow.");
         }
+    }
 }
 
 // o - koło
 // c - czworokat
 // p - pieciokat
 // s - szesciokat
-// r - romb
-// t - prostokat
-// k -kwadrat
+// r - romb /
+// t - prostokat /
+// k -kwadrat /
 //

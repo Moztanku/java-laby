@@ -1,10 +1,7 @@
 package util;
 
-public abstract class Kwadrat extends Czworokat {
-    public double circumference(double b){
-        return super.circumference(b,b,b,b);
-    };
-    public double area(double b){
-        return super.area(b,b,b,b,180.0);
+public class Kwadrat extends Czworokat {
+    public Kwadrat(double b){
+        super(b,b,b,b,180.0);
     };
 }
