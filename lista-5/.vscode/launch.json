@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch fxApp",
+            "request": "launch",
+            "mainClass": "fxApp",
+            "projectName": "lista-5_8a5ac5b0",
+            "vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk-17.0.2/lib\" --add-modules=javafx.controls"
+        },
+        {
+            "type": "java",
+            "name": "Launch PopupExample",
+            "request": "launch",
+            "mainClass": "PopupExample",
+            "projectName": "lista-5_8a5ac5b0",
+            "vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk-17.0.2/lib\" --add-modules=javafx.controls"
+        },
+        {
+            "type": "java",
+            "name": "Launch FXMovingScaling",
+            "request": "launch",
+            "mainClass": "FXMovingScaling",
+            "projectName": "lista-5_8a5ac5b0",
+            "vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk-17.0.2/lib\" --add-modules=javafx.controls"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk-17.0.2/lib\" --add-modules=javafx.controls"
+        },
+        {
+            "type": "java",
+            "name": "Launch fxgui",
+            "request": "launch",
+            "mainClass": "fxgui",
+            "projectName": "lista-5_8a5ac5b0",
+            "vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk-17.0.2/lib\" --add-modules=javafx.controls"
+        }
+    ]
+}
