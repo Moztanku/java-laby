@@ -1,10 +1,14 @@
 package util;
 
-public abstract class Szesciokat implements Figura {
-    public double circumference(double bok){
+public class Szesciokat implements Figura {
+    public Szesciokat(double _bok){
+        bok = _bok;
+    };
+    protected double bok;
+    public double circumference(){
         return 6.0*bok;
     };
-    public double area(double bok){
+    public double area(){
         return 1.5*Math.pow(bok, 2.0)*Math.sqrt(3);
     };
 }
