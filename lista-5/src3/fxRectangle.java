@@ -8,11 +8,21 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 
+/**
+ * Class implementing rectangle shape
+ */
 public class fxRectangle extends Rectangle implements fxShape{
     private double anchorX;
     private double anchorY;
     private Color color;
 
+    /**
+     * Initializing rectangle
+     * @param x y coordinate
+     * @param y x coordinate
+     * @param w width
+     * @param h height
+     */
     public fxRectangle(double x,double y,double w,double h){
         super(x,y,w,h);
         anchorX = x;
@@ -25,6 +35,7 @@ public class fxRectangle extends Rectangle implements fxShape{
         setOnMouseDragged(new fxMouseEventHandler());
         setOnScroll(new fxScrollEventHandler());
     };
+    
     public void setAnchor(double x,double y){
         anchorX = x;
         anchorY = y;
@@ -74,6 +85,9 @@ public class fxRectangle extends Rectangle implements fxShape{
         return this;
     }
 
+    /**
+     * Handles mouse events
+     */
     private class fxMouseEventHandler implements EventHandler<MouseEvent>{
         @Override
         public void handle(MouseEvent event) {

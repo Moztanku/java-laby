@@ -10,8 +10,6 @@ import javafx.stage.Stage;
 
 /**
  * Class that sets up area used for drawing different shapes.
- * @author Jacek Zub
- * @version 1.0
  */
 public class fxPane extends Pane{
     /**

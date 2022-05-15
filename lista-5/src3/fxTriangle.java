@@ -8,6 +8,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Shape;
 
+/**
+ * Class implementing triangle shape
+ */
 public class fxTriangle extends  Polygon implements fxShape{
     private double anchorX;
     private double anchorY;
@@ -16,6 +19,13 @@ public class fxTriangle extends  Polygon implements fxShape{
     private double[] vertexA;
     private double[] vertexB;
 
+    /**
+     * Initializing triangle
+     * @param x y coordinate
+     * @param y x coordinate
+     * @param w width
+     * @param h height
+     */
     public fxTriangle(double x,double y,double _x,double _y){
         super();
         anchorX = x;
@@ -78,6 +88,9 @@ public class fxTriangle extends  Polygon implements fxShape{
         return this;
     }
 
+    /**
+     * Handles mouse events
+     */
     private class fxMouseEventHandler implements EventHandler<MouseEvent>{
         @Override
         public void handle(MouseEvent event) {

@@ -8,11 +8,21 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Shape;
 
+/**
+ * Class implementing ellipse shape
+ */
 public class fxEllipse extends Ellipse implements fxShape{
     private double anchorX;
     private double anchorY;
     private Color color;
 
+    /**
+     * Initializing ellipse
+     * @param x y coordinate
+     * @param y x coordinate
+     * @param w width
+     * @param h height
+     */
     public fxEllipse(double x,double y,double w,double h){
         super(x,y,w,h);
         anchorX = x;
@@ -25,11 +35,16 @@ public class fxEllipse extends Ellipse implements fxShape{
         setOnMouseDragged(new fxMouseEventHandler());
         setOnScroll(new fxScrollEventHandler());
     }
-    
+    /**
+     * Sets anchor used to resize shape during initialization
+     */
     public void setAnchor(double x,double y){
         anchorX = x;
         anchorY = y;
     }
+    /**
+     * Checks if shape is hit with mouse
+     */
     public boolean ishit(double x,double y){
         return getBoundsInLocal().contains(x,y);
     }
@@ -58,10 +73,15 @@ public class fxEllipse extends Ellipse implements fxShape{
     public Color getColor(){
         return color;
     }
+    /**
+     * Returns this object
+     */
     public Shape getShape(){
         return this;
     }
-
+    /**
+     * Handles mouse events
+     */
     private class fxMouseEventHandler implements EventHandler<MouseEvent>{
         @Override
         public void handle(MouseEvent event) {

@@ -12,7 +12,6 @@ import javafx.stage.Stage;
 /**
     * Main class responsible for running this program.
     * @author Jacek Zub
-    * @version 1.0
 */
 public class fxApp extends Application{
     /**
