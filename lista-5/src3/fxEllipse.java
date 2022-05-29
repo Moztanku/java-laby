@@ -35,16 +35,10 @@ public class fxEllipse extends Ellipse implements fxShape{
         setOnMouseDragged(new fxMouseEventHandler());
         setOnScroll(new fxScrollEventHandler());
     }
-    /**
-     * Sets anchor used to resize shape during initialization
-     */
     public void setAnchor(double x,double y){
         anchorX = x;
         anchorY = y;
     }
-    /**
-     * Checks if shape is hit with mouse
-     */
     public boolean ishit(double x,double y){
         return getBoundsInLocal().contains(x,y);
     }

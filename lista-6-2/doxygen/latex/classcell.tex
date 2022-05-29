@@ -1,0 +1,84 @@
+\hypertarget{classcell}{}\doxysection{cell Class Reference}
+\label{classcell}\index{cell@{cell}}
+Inheritance diagram for cell\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcell}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcell_a83c57aa5c9a0afba9074aa123db357db}\label{classcell_a83c57aa5c9a0afba9074aa123db357db}} 
+void {\bfseries kill\+Thread} ()
+\item 
+\mbox{\Hypertarget{classcell_a157c3c1842dd588da118be9e8d267923}\label{classcell_a157c3c1842dd588da118be9e8d267923}} 
+boolean {\bfseries get\+Active} ()
+\item 
+\mbox{\Hypertarget{classcell_a1a03d0e8f1701405cd385a964eea3931}\label{classcell_a1a03d0e8f1701405cd385a964eea3931}} 
+void {\bfseries set\+Active} (boolean b)
+\item 
+\mbox{\Hypertarget{classcell_a8c07b216751b5968dad5e3a25cbf2c0d}\label{classcell_a8c07b216751b5968dad5e3a25cbf2c0d}} 
+{\bfseries cell} (double \+\_\+x, double \+\_\+y, double \+\_\+w, double \+\_\+h)
+\item 
+void \mbox{\hyperlink{classcell_a423e177408cc423cec0693007d9f1a68}{run}} ()
+\item 
+\mbox{\Hypertarget{classcell_aa02ca8602c2336ee3242e988892dc4da}\label{classcell_aa02ca8602c2336ee3242e988892dc4da}} 
+void {\bfseries set\+Color} (Color c)
+\item 
+\mbox{\Hypertarget{classcell_a3ffd6832b9cc84411f88285a02e28ad7}\label{classcell_a3ffd6832b9cc84411f88285a02e28ad7}} 
+Color {\bfseries get\+Color} ()
+\item 
+\mbox{\Hypertarget{classcell_a6194ff28a7908940a690149bab711f9d}\label{classcell_a6194ff28a7908940a690149bab711f9d}} 
+void {\bfseries set\+NeighbourW} (\mbox{\hyperlink{classcell}{cell}} c)
+\item 
+\mbox{\Hypertarget{classcell_af6908a6e016f9c3e3590ed6d6c62fdb0}\label{classcell_af6908a6e016f9c3e3590ed6d6c62fdb0}} 
+void {\bfseries set\+NeighbourN} (\mbox{\hyperlink{classcell}{cell}} c)
+\item 
+\mbox{\Hypertarget{classcell_a685654db54d6b9b5ae7bbfb3ed900f85}\label{classcell_a685654db54d6b9b5ae7bbfb3ed900f85}} 
+void {\bfseries set\+NeighbourE} (\mbox{\hyperlink{classcell}{cell}} c)
+\item 
+\mbox{\Hypertarget{classcell_a83270ecef0bbbb84f76b09011646d89c}\label{classcell_a83270ecef0bbbb84f76b09011646d89c}} 
+void {\bfseries set\+NeighbourS} (\mbox{\hyperlink{classcell}{cell}} c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcell_ad1a30b9473ca5bb1bf910ff542b2d76f}\label{classcell_ad1a30b9473ca5bb1bf910ff542b2d76f}} 
+static void {\bfseries set\+Graphics\+Context} (Graphics\+Context x)
+\item 
+static void \mbox{\hyperlink{classcell_a379c89305ebe79e8cc86626948ed2fef}{set\+KP}} (int \+\_\+k, double \+\_\+p)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Jacek Zub 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcell_a423e177408cc423cec0693007d9f1a68}\label{classcell_a423e177408cc423cec0693007d9f1a68}} 
+\index{cell@{cell}!run@{run}}
+\index{run@{run}!cell@{cell}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void cell.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method running in this thread until kill\+Thread() is run \mbox{\Hypertarget{classcell_a379c89305ebe79e8cc86626948ed2fef}\label{classcell_a379c89305ebe79e8cc86626948ed2fef}} 
+\index{cell@{cell}!setKP@{setKP}}
+\index{setKP@{setKP}!cell@{cell}}
+\doxysubsubsection{\texorpdfstring{setKP()}{setKP()}}
+{\footnotesize\ttfamily static void cell.\+set\+KP (\begin{DoxyParamCaption}\item[{int}]{\+\_\+k,  }\item[{double}]{\+\_\+p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Sets the average wait time in ms for cells to update and their chance to get a random colour 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+k} & time in ms between colour updates \\
+\hline
+{\em \+\_\+p} & chance to update to a random colour \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cell.\+java\end{DoxyCompactItemize}

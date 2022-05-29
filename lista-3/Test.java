@@ -1,13 +1,10 @@
 import util.Figura;
 import util.Kolo;
-import util.Czworokat;
 import util.Kwadrat;
 import util.Pieciokat;
 import util.Prostokat;
 import util.Romb;
 import util.Szesciokat;
-
-import java.util.Vector;
 
 public class Test {
     public static void main(String[] args) {

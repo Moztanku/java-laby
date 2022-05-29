@@ -6,6 +6,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch app",
+            "request": "launch",
+            "mainClass": "app",
+            "projectName": "lista-5_8a5ac5b0",
+            "vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk-17.0.2/lib\" --add-modules=javafx.controls"
+        },
+        {
+            "type": "java",
             "name": "Launch fxApp",
             "request": "launch",
             "mainClass": "fxApp",
