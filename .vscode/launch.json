@@ -50,6 +50,14 @@
             "mainClass": "fxgui",
             "projectName": "lista-5_8a5ac5b0",
             "vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk-17.0.2/lib\" --add-modules=javafx.controls"
+        },
+        {
+            "type": "java",
+            "name": "Launch ClientGUI",
+            "request": "launch",
+            "mainClass": "ClientGUI",
+            "projectName": "lista-5_8a5ac5b0",
+            "vmArgs": "--module-path \"C:/Program Files/Java/javafx-sdk-17.0.2/lib\" --add-modules=javafx.controls"
         }
     ]
 }
